@@ -4,11 +4,12 @@
 using namespace std;
 
 void subsequenceOfSumK(vector<int> v , vector<int> sub , int k , int sum , int n){
-    if(n == v.size() ) return ;
+    if(n == v.size() ) return;
     
     if(sum == k) {
         for(int i = 0 ; i < sub.size() ; i++) cout<<sub[i]<<" ";
         cout<<"\n";
+        return;
     }
     
     subsequenceOfSumK(v , sub , k , sum , n+1);
